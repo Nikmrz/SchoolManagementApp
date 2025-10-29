@@ -14,12 +14,10 @@ class AdminMainviewmodel extends BaseViewModel {
 
   void onNotificationPressed() {
     _navService.navigateTo('/notifications');
-    // Navigate to notification page or open modal
   }
 
   void onProfilePressed() {
-    // Navigate to profile page or settings
-    currentIndex = 3; // switch to profile tab
+    currentIndex = 3;
     notifyListeners();
   }
 }
