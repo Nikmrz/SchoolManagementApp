@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:schoolmngmtapp/ui/views/teacher/teacher_mainview/teacher_attendence/teacherattendview.dart';
 import 'package:schoolmngmtapp/ui/views/teacher/teacher_mainview/teacher_dashboard/teacherdashboardview.dart';
 import 'package:schoolmngmtapp/ui/views/teacher/teacher_mainview/teacher_viewmodel.dart';
 import 'package:stacked/stacked.dart';
@@ -17,7 +18,11 @@ class TeacherMainView extends StatelessWidget {
       ) {
         return Scaffold(
           appBar: AppBar(
-            leading: Text('Bhadra 20, Tuesday'),
+            leadingWidth: 200,
+            leading: Padding(
+              padding: const EdgeInsets.only(left: 12.0, top: 12),
+              child: Text('Bhadra 20, Tuesday', style: TextStyle(fontSize: 14)),
+            ),
             actions: [
               IconButton(
                   onPressed: model.onNotificationPressed,
@@ -44,17 +49,21 @@ class TeacherMainView extends StatelessWidget {
             index: model.currentIndex,
             children: const [
               TeacherDashboardView(),
+              Teacherattendview(),
             ],
           ),
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: model.currentIndex,
+            onTap: model.setIndex,
             items: [
               BottomNavigationBarItem(
                   icon: Icon(Icons.dashboard), label: 'Dashboard'),
               BottomNavigationBarItem(
+                  icon: Icon(Icons.person_2), label: 'Attendance'),
+              BottomNavigationBarItem(
                   icon: Icon(Icons.assignment), label: 'Assignment'),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.person), label: 'profile')
+                  icon: Icon(Icons.person), label: 'Profile')
             ],
           ),
         );

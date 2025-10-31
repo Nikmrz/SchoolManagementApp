@@ -15,6 +15,7 @@ import 'package:schoolmngmtapp/ui/views/parent/useragreement/useragreementview.d
 import 'package:schoolmngmtapp/ui/views/role_selection/role_selectionview.dart';
 import 'package:schoolmngmtapp/ui/views/startup/startup_view.dart';
 import 'package:schoolmngmtapp/ui/views/teacher/teacher_loginview.dart';
+import 'package:schoolmngmtapp/ui/views/teacher/teacher_mainview/teacher_attendence/teacherattendview.dart';
 import 'package:schoolmngmtapp/ui/views/teacher/teacher_mainview/teacher_dashboard/teacherdashboardview.dart';
 import 'package:schoolmngmtapp/ui/views/teacher/teacher_mainview/teacher_view.dart';
 import 'package:stacked/stacked_annotations.dart';
@@ -40,6 +41,7 @@ import 'package:stacked_services/stacked_services.dart';
     MaterialRoute(page: ParentProfileview),
     MaterialRoute(page: AdminDashview),
     MaterialRoute(page: AdminMainview),
+    MaterialRoute(page: Teacherattendview),
     // @stacked-route
   ],
   dependencies: [

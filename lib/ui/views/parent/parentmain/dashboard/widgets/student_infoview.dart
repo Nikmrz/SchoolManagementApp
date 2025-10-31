@@ -31,7 +31,7 @@ class StudentCard extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           Text(
-            "roll :${student.roll} | class: ${student.studentClass}",
+            "${student.roll} | ${student.studentClass}",
             style: const TextStyle(fontSize: 12, color: Colors.grey),
             textAlign: TextAlign.center,
           ),

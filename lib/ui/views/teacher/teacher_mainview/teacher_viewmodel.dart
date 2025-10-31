@@ -12,7 +12,12 @@ class TeacherMainViewModel extends BaseViewModel {
     // Handle notification button press
   }
   void onProfileClicked() {
-    currentIndex = 2;
+    currentIndex = 3;
+    notifyListeners();
+  }
+
+  void onAttendancePressed() {
+    currentIndex = 1;
     notifyListeners();
   }
 }
