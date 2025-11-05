@@ -13,17 +13,6 @@ class Childassignmentview extends StatelessWidget {
       viewModelBuilder: () => ChildassignmentviewModel(),
       builder: (context, model, child) {
         return Scaffold(
-          backgroundColor: Colors.white,
-          appBar: AppBar(
-            elevation: 0,
-            backgroundColor: Colors.white,
-            title: const Text(
-              "Homework Diary",
-              style:
-                  TextStyle(color: Colors.black, fontWeight: FontWeight.w600),
-            ),
-            centerTitle: true,
-          ),
           body: Padding(
             padding: const EdgeInsets.all(16),
             child: Column(

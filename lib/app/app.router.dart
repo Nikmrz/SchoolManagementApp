@@ -70,7 +70,7 @@ class Routes {
 
   static const teacherMainView = '/teacher-main-view';
 
-  static const parentProfileview = '/parent-profileview';
+  static const parentProfileView = '/parent-profile-view';
 
   static const adminDashview = '/admin-dashview';
 
@@ -95,7 +95,7 @@ class Routes {
     dashboardView,
     teacherDashboardView,
     teacherMainView,
-    parentProfileview,
+    parentProfileView,
     adminDashview,
     adminMainview,
     teacherattendview,
@@ -162,8 +162,8 @@ class StackedRouter extends _i1.RouterBase {
       page: _i15.TeacherMainView,
     ),
     _i1.RouteDef(
-      Routes.parentProfileview,
-      page: _i16.ParentProfileview,
+      Routes.parentProfileView,
+      page: _i16.ParentProfileView,
     ),
     _i1.RouteDef(
       Routes.adminDashview,
@@ -268,9 +268,9 @@ class StackedRouter extends _i1.RouterBase {
         settings: data,
       );
     },
-    _i16.ParentProfileview: (data) {
+    _i16.ParentProfileView: (data) {
       return _i21.MaterialPageRoute<dynamic>(
-        builder: (context) => const _i16.ParentProfileview(),
+        builder: (context) => const _i16.ParentProfileView(),
         settings: data,
       );
     },
@@ -504,14 +504,14 @@ extension NavigatorStateExtension on _i22.NavigationService {
         transition: transition);
   }
 
-  Future<dynamic> navigateToParentProfileview([
+  Future<dynamic> navigateToParentProfileView([
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
     Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
         transition,
   ]) async {
-    return navigateTo<dynamic>(Routes.parentProfileview,
+    return navigateTo<dynamic>(Routes.parentProfileView,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,
@@ -770,14 +770,14 @@ extension NavigatorStateExtension on _i22.NavigationService {
         transition: transition);
   }
 
-  Future<dynamic> replaceWithParentProfileview([
+  Future<dynamic> replaceWithParentProfileView([
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
     Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
         transition,
   ]) async {
-    return replaceWith<dynamic>(Routes.parentProfileview,
+    return replaceWith<dynamic>(Routes.parentProfileView,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,

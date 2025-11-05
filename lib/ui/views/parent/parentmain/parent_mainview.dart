@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:schoolmngmtapp/ui/views/parent/parentmain/childassignment/childassignmentview.dart';
 import 'package:schoolmngmtapp/ui/views/parent/parentmain/dashboard/dashboard_view.dart';
 import 'package:schoolmngmtapp/ui/views/parent/parentmain/parent_mainviewmodel.dart';
+import 'package:schoolmngmtapp/ui/views/parent/parentmain/parent_profile/parent_profileview.dart';
 import 'package:stacked/stacked.dart';
 
 class ParentMainview extends StatelessWidget {
@@ -53,6 +54,7 @@ class ParentMainview extends StatelessWidget {
             children: const [
               DashboardView(),
               Childassignmentview(),
+              ParentProfileView(),
             ],
           ),
           bottomNavigationBar: BottomNavigationBar(

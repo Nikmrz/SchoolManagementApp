@@ -39,7 +39,7 @@ import 'package:stacked_services/stacked_services.dart';
     MaterialRoute(page: DashboardView),
     MaterialRoute(page: TeacherDashboardView),
     MaterialRoute(page: TeacherMainView),
-    MaterialRoute(page: ParentProfileview),
+    MaterialRoute(page: ParentProfileView),
     MaterialRoute(page: AdminDashview),
     MaterialRoute(page: AdminMainview),
     MaterialRoute(page: Teacherattendview),
