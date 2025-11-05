@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:schoolmngmtapp/ui/views/parent/parentmain/childassignment/childassignmentview.dart';
 import 'package:schoolmngmtapp/ui/views/parent/parentmain/dashboard/dashboard_view.dart';
 import 'package:schoolmngmtapp/ui/views/parent/parentmain/parent_mainviewmodel.dart';
 import 'package:stacked/stacked.dart';
@@ -51,6 +52,7 @@ class ParentMainview extends StatelessWidget {
             index: model.currentIndex,
             children: const [
               DashboardView(),
+              Childassignmentview(),
             ],
           ),
           bottomNavigationBar: BottomNavigationBar(
@@ -65,7 +67,7 @@ class ParentMainview extends StatelessWidget {
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.calendar_month),
-                label: 'Attendance',
+                label: 'Assignment',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.payment),

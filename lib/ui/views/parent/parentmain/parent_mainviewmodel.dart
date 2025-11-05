@@ -17,6 +17,11 @@ class ParentMainviewModel extends BaseViewModel {
     // Navigate to notification page or open modal
   }
 
+  void onAssignmentPressed() {
+    currentIndex = 1; // switch to assignment tab
+    notifyListeners();
+  }
+
   void onProfilePressed() {
     // Navigate to profile page or settings
     currentIndex = 3; // switch to profile tab

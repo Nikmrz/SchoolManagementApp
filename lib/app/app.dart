@@ -8,6 +8,7 @@ import 'package:schoolmngmtapp/ui/views/onboarding/onboarding_view.dart';
 import 'package:schoolmngmtapp/ui/views/parent/otp/otp_view.dart';
 import 'package:schoolmngmtapp/ui/views/parent/parent_loginview.dart';
 import 'package:schoolmngmtapp/ui/views/parent/parent_regview.dart';
+import 'package:schoolmngmtapp/ui/views/parent/parentmain/childassignment/childassignmentview.dart';
 import 'package:schoolmngmtapp/ui/views/parent/parentmain/dashboard/dashboard_view.dart';
 import 'package:schoolmngmtapp/ui/views/parent/parentmain/parent_mainview.dart';
 import 'package:schoolmngmtapp/ui/views/parent/parentmain/parent_profile/parent_profileview.dart';
@@ -42,6 +43,7 @@ import 'package:stacked_services/stacked_services.dart';
     MaterialRoute(page: AdminDashview),
     MaterialRoute(page: AdminMainview),
     MaterialRoute(page: Teacherattendview),
+    MaterialRoute(page: Childassignmentview),
     // @stacked-route
   ],
   dependencies: [
