@@ -19,6 +19,10 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'InstrumentSans',
+      ),
+      debugShowCheckedModeBanner: false,
       initialRoute: Routes.onboardingView,
       onGenerateRoute: StackedRouter().onGenerateRoute,
       navigatorKey: StackedService.navigatorKey,

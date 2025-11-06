@@ -22,38 +22,48 @@ class ParentProfileView extends StatelessWidget {
                 ),
                 const SizedBox(height: 12),
                 Text(
-                  "Parent Name",
+                  "Dinesh Rai",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 36,
                     fontWeight: FontWeight.bold,
-                    color: Colors.grey.shade900,
+                    color: const Color.fromARGB(255, 44, 159, 3),
                   ),
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  "parentemail@email.com",
+                  "dineshemail@email.com",
                   style: TextStyle(
                     fontSize: 14,
                     color: Colors.grey.shade600,
                   ),
                 ),
                 const SizedBox(height: 30),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text(
-                      "Dark Mode",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                      ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 170, 209, 132),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(18.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text(
+                          "Dark Mode",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Switch(
+                          value: model.darkMode,
+                          activeColor: Colors.blue,
+                          onChanged: model.toggleDarkMode,
+                        ),
+                      ],
                     ),
-                    Switch(
-                      value: model.darkMode,
-                      activeColor: Colors.blue,
-                      onChanged: model.toggleDarkMode,
-                    ),
-                  ],
+                  ),
                 ),
                 const Spacer(),
                 SizedBox(
@@ -61,11 +71,13 @@ class ParentProfileView extends StatelessWidget {
                   height: 52,
                   child: ElevatedButton.icon(
                     onPressed: model.logout,
-                    icon: const Icon(Icons.logout),
+                    icon: const Icon(Icons.logout, color: Colors.white),
                     label: const Text(
                       "Logout",
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
                     ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.redAccent,

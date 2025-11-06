@@ -17,10 +17,9 @@ class DashboardView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Greeting
               const Text(
                 "Hello,",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
+                style: TextStyle(fontSize: 34, fontWeight: FontWeight.w500),
               ),
               Text(
                 "Mr. Dinesh Rai",
@@ -30,8 +29,6 @@ class DashboardView extends StatelessWidget {
                     color: Colors.green),
               ),
               const SizedBox(height: 20),
-
-              // Connected Students
               const Text(
                 "Connected Students",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
@@ -41,10 +38,9 @@ class DashboardView extends StatelessWidget {
                 height: 140,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: model.students.length + 1, // +1 for add button
+                  itemCount: model.students.length + 1,
                   itemBuilder: (context, index) {
                     if (index == model.students.length) {
-                      // Add new student button
                       return GestureDetector(
                         onTap: model.onAddStudent,
                         child: Container(
@@ -66,10 +62,7 @@ class DashboardView extends StatelessWidget {
                   },
                 ),
               ),
-
               const SizedBox(height: 24),
-
-              // Main Menu
               const Text(
                 "Main Menu",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),

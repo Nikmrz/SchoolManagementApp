@@ -18,6 +18,17 @@ class Childassignmentview extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Text(
+                  "ASSIGNMENTS",
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                    color: const Color.fromARGB(255, 51, 244, 2),
+                  ),
+                ),
+                SizedBox(
+                  height: 16,
+                ),
                 // Child selector
                 ChildSelector(
                   children: model.children,

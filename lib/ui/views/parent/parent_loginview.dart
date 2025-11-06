@@ -37,6 +37,7 @@ class ParentLoginview extends StatelessWidget {
                     child: Text(
                       "Hello",
                       style: TextStyle(
+                        fontFamily: 'InstrumentSans',
                         fontSize: 48,
                         color: Colors.lightGreen,
                         fontWeight: FontWeight.bold,
@@ -46,11 +47,12 @@ class ParentLoginview extends StatelessWidget {
                   const Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "Dear Parents",
+                      "Dear Parents !",
                       style: TextStyle(
+                        fontFamily: 'InstrumentSans',
                         fontSize: 36,
                         color: Colors.lightGreen,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),

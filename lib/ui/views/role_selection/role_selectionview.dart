@@ -59,6 +59,7 @@ class RoleSelectionView extends StatelessWidget {
                                 },
                                 child: Text('Admin'),
                                 style: ElevatedButton.styleFrom(
+                                    textStyle: TextStyle(fontSize: 28),
                                     backgroundColor:
                                         const Color.fromARGB(255, 215, 124, 5),
                                     foregroundColor: Colors.white,
@@ -79,6 +80,7 @@ class RoleSelectionView extends StatelessWidget {
                                 },
                                 child: Text('Teacher'),
                                 style: ElevatedButton.styleFrom(
+                                    textStyle: TextStyle(fontSize: 28),
                                     backgroundColor:
                                         const Color.fromARGB(255, 22, 1, 254),
                                     foregroundColor: Colors.white,
@@ -99,6 +101,7 @@ class RoleSelectionView extends StatelessWidget {
                                 },
                                 child: Text('Parent'),
                                 style: ElevatedButton.styleFrom(
+                                    textStyle: TextStyle(fontSize: 28),
                                     backgroundColor:
                                         const Color.fromARGB(255, 1, 151, 48),
                                     foregroundColor: Colors.white,

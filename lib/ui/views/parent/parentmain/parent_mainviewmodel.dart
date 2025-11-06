@@ -23,8 +23,12 @@ class ParentMainviewModel extends BaseViewModel {
   }
 
   void onProfilePressed() {
-    // Navigate to profile page or settings
     currentIndex = 3; // switch to profile tab
+    notifyListeners();
+  }
+
+  void onNoticePressed() {
+    currentIndex = 2; // switch to notice tab
     notifyListeners();
   }
 }

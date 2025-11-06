@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:schoolmngmtapp/ui/views/parent/parentmain/childassignment/childassignmentview.dart';
 import 'package:schoolmngmtapp/ui/views/parent/parentmain/dashboard/dashboard_view.dart';
+import 'package:schoolmngmtapp/ui/views/parent/parentmain/notice/notice_view.dart';
 import 'package:schoolmngmtapp/ui/views/parent/parentmain/parent_mainviewmodel.dart';
 import 'package:schoolmngmtapp/ui/views/parent/parentmain/parent_profile/parent_profileview.dart';
 import 'package:stacked/stacked.dart';
@@ -19,17 +20,13 @@ class ParentMainview extends StatelessWidget {
       ) {
         return Scaffold(
           appBar: AppBar(
+            automaticallyImplyLeading: false,
             backgroundColor: Colors.white,
             elevation: 1,
+            leadingWidth: 200,
             leading: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Text(
-                "Ashoj 20, Tuesday",
-                style: const TextStyle(
-                    color: Colors.black87,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500),
-              ),
+              padding: const EdgeInsets.only(left: 12.0, top: 12),
+              child: Text('Bhadra 20, Tuesday', style: TextStyle(fontSize: 14)),
             ),
             actions: [
               IconButton(
@@ -54,6 +51,7 @@ class ParentMainview extends StatelessWidget {
             children: const [
               DashboardView(),
               Childassignmentview(),
+              NoticeView(),
               ParentProfileView(),
             ],
           ),
@@ -73,7 +71,7 @@ class ParentMainview extends StatelessWidget {
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.payment),
-                label: 'Fees',
+                label: 'Notice',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.person),

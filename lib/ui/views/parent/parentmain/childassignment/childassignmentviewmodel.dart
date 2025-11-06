@@ -45,15 +45,19 @@ class ChildassignmentviewModel extends BaseViewModel {
           "task": "Write 10 sentences about your Family.",
           "attachment": false
         },
+        {
+          "subject": "Math",
+          "task": "Practice page 21-23\nCopy twice in notebook.",
+          "attachment": true
+        },
+        {
+          "subject": "English",
+          "task": "Write 10 sentences about your Family.",
+          "attachment": false
+        },
       ];
     } else {
-      todayAssignments = [
-        {
-          "subject": "Science",
-          "task": "Revise Chapter 2 for oral quiz.",
-          "attachment": false
-        }
-      ];
+      todayAssignments = [];
     }
   }
 }

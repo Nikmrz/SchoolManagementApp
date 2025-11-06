@@ -6,12 +6,14 @@ class Student {
   final String roll;
   final String studentClass;
   final String avatarUrl;
+  final String gender;
 
   Student(
       {required this.name,
       required this.roll,
       required this.studentClass,
-      required this.avatarUrl});
+      required this.avatarUrl,
+      required this.gender});
 }
 
 class Service {
@@ -24,15 +26,18 @@ class Service {
 class DashboardViewModel extends BaseViewModel {
   final List<Student> students = [
     Student(
-        name: "Sita Rai",
-        roll: "01",
-        studentClass: "5A",
-        avatarUrl: "https://i.pravatar.cc/150?img=3"),
+      name: "Sita Rai",
+      roll: "01",
+      studentClass: "5A",
+      avatarUrl: "https://i.pravatar.cc/150?img=3",
+      gender: "female",
+    ),
     Student(
         name: "Ram Rai",
         roll: "02",
         studentClass: "3B",
-        avatarUrl: "https://i.pravatar.cc/150?img=5"),
+        avatarUrl: "https://i.pravatar.cc/150?img=5",
+        gender: "male"),
   ];
 
   final List<Service> services = [
