@@ -16,6 +16,11 @@ class TeacherMainViewModel extends BaseViewModel {
     notifyListeners();
   }
 
+  void onAssignmentPressed() {
+    currentIndex = 2;
+    notifyListeners();
+  }
+
   void onAttendancePressed() {
     currentIndex = 1;
     notifyListeners();

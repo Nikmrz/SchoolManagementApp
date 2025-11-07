@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:schoolmngmtapp/ui/views/teacher/teacher_mainview/teacher_assignment/teacher_assignment_view.dart';
 import 'package:schoolmngmtapp/ui/views/teacher/teacher_mainview/teacher_attendence/teacherattendview.dart';
 import 'package:schoolmngmtapp/ui/views/teacher/teacher_mainview/teacher_dashboard/teacherdashboardview.dart';
 import 'package:schoolmngmtapp/ui/views/teacher/teacher_mainview/teacher_viewmodel.dart';
@@ -50,20 +51,36 @@ class TeacherMainView extends StatelessWidget {
             children: const [
               TeacherDashboardView(),
               Teacherattendview(),
+              TeacherAssignmentView(),
             ],
           ),
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: model.currentIndex,
             onTap: model.setIndex,
-            items: [
+            type: BottomNavigationBarType.fixed,
+            backgroundColor: Colors.blue.shade600,
+            selectedItemColor: Colors.white,
+            unselectedItemColor: Colors.white70,
+            showUnselectedLabels: true,
+            selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
+            unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w400),
+            items: const [
               BottomNavigationBarItem(
-                  icon: Icon(Icons.dashboard), label: 'Dashboard'),
+                icon: Icon(Icons.dashboard),
+                label: 'Dashboard',
+              ),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.person_2), label: 'Attendance'),
+                icon: Icon(Icons.person_2),
+                label: 'Attendance',
+              ),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.assignment), label: 'Assignment'),
+                icon: Icon(Icons.assignment),
+                label: 'Assignment',
+              ),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.person), label: 'Profile')
+                icon: Icon(Icons.person),
+                label: 'Profile',
+              ),
             ],
           ),
         );
