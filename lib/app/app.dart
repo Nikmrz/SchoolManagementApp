@@ -3,6 +3,7 @@ import 'package:schoolmngmtapp/ui/dialogs/info_alert/info_alert_dialog.dart';
 import 'package:schoolmngmtapp/ui/views/admin/admin_login/admin_loginview.dart';
 import 'package:schoolmngmtapp/ui/views/admin/admin_main/admin_dashboard/admin_dashview.dart';
 import 'package:schoolmngmtapp/ui/views/admin/admin_main/admin_mainview.dart';
+import 'package:schoolmngmtapp/ui/views/admin/admin_main/admin_notice/admin_noticeview.dart';
 import 'package:schoolmngmtapp/ui/views/home/home_view.dart';
 import 'package:schoolmngmtapp/ui/views/onboarding/onboarding_view.dart';
 import 'package:schoolmngmtapp/ui/views/parent/otp/otp_view.dart';
@@ -50,6 +51,7 @@ import 'package:stacked_services/stacked_services.dart';
     MaterialRoute(page: NoticeView),
     MaterialRoute(page: TeacherProfileView),
     MaterialRoute(page: TeacherAssignmentView),
+    MaterialRoute(page: AdminNoticeView),
     // @stacked-route
   ],
   dependencies: [

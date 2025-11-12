@@ -16,6 +16,11 @@ class AdminMainviewmodel extends BaseViewModel {
     _navService.navigateTo('/notifications');
   }
 
+  void onNoticePressed() {
+    currentIndex = 1;
+    notifyListeners();
+  }
+
   void onProfilePressed() {
     currentIndex = 3;
     notifyListeners();

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:schoolmngmtapp/ui/views/admin/admin_main/admin_dashboard/admin_dashview.dart';
 import 'package:schoolmngmtapp/ui/views/admin/admin_main/admin_mainviewmodel.dart';
+import 'package:schoolmngmtapp/ui/views/admin/admin_main/admin_notice/admin_noticeview.dart';
 import 'package:stacked/stacked.dart';
 
 class AdminMainview extends StatelessWidget {
@@ -51,6 +52,7 @@ class AdminMainview extends StatelessWidget {
             index: model.currentIndex,
             children: const [
               AdminDashview(),
+              AdminNoticeView(),
             ],
           ),
           bottomNavigationBar: BottomNavigationBar(
@@ -65,7 +67,7 @@ class AdminMainview extends StatelessWidget {
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.calendar_month),
-                label: 'Attendance',
+                label: 'Notice',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.payment),
