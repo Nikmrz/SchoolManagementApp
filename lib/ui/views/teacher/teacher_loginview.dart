@@ -36,7 +36,7 @@ class TeacherLoginview extends StatelessWidget {
                       "Welcome",
                       style: TextStyle(
                         fontSize: 48,
-                        color: Colors.lightGreen,
+                        color: const Color.fromARGB(255, 8, 4, 246),
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -47,7 +47,7 @@ class TeacherLoginview extends StatelessWidget {
                       "Back Here, Teacher !",
                       style: TextStyle(
                         fontSize: 36,
-                        color: Colors.lightGreen,
+                        color: const Color.fromARGB(255, 8, 4, 246),
                         fontWeight: FontWeight.w500,
                       ),
                     ),
