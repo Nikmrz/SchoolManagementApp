@@ -11,30 +11,38 @@ class MainMenuSection extends StatelessWidget {
       children: [
         const Text(
           "Main Menu",
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
         ),
-        const SizedBox(height: 16),
+        const SizedBox(height: 18),
         GridView.count(
           crossAxisCount: 3,
           shrinkWrap: true,
-          crossAxisSpacing: 16,
-          mainAxisSpacing: 16,
           physics: const NeverScrollableScrollPhysics(),
+          crossAxisSpacing: 18,
+          mainAxisSpacing: 18,
           children: const [
             MenuCard(
                 icon: Icons.check_circle,
                 title: "Attendance",
-                color: Colors.green),
+                color: Colors.blue),
             MenuCard(
-                icon: Icons.people, title: "Students", color: Colors.orange),
+                icon: Icons.people,
+                title: "Students",
+                color: Colors.blueAccent),
             MenuCard(
-                icon: Icons.assignment, title: "Homework", color: Colors.blue),
-            MenuCard(icon: Icons.book, title: "Subjects", color: Colors.purple),
-            MenuCard(icon: Icons.event, title: "Schedule", color: Colors.teal),
+                icon: Icons.assignment,
+                title: "Homework",
+                color: Colors.lightBlue),
+            MenuCard(icon: Icons.book, title: "Subjects", color: Colors.indigo),
+            MenuCard(icon: Icons.event, title: "Schedule", color: Colors.cyan),
             MenuCard(
-                icon: Icons.chat, title: "Notices", color: Colors.redAccent),
+                icon: Icons.campaign, title: "Notices", color: Colors.teal),
+            MenuCard(icon: Icons.score, title: "Exams", color: Colors.indigo),
+            MenuCard(icon: Icons.event, title: "Schedule", color: Colors.cyan),
+            MenuCard(
+                icon: Icons.campaign, title: "Notices", color: Colors.teal),
           ],
-        ),
+        )
       ],
     );
   }

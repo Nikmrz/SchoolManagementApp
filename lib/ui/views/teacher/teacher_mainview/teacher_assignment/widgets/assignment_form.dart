@@ -48,7 +48,32 @@ class AssignmentForm extends StatelessWidget {
             border: OutlineInputBorder(),
           ),
         ),
-        const SizedBox(height: 12),
+        const SizedBox(height: 14),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Expanded(
+              child: Text(
+                "Attachment: ${viewModel.attachmentFileName ?? 'None'}",
+                style: const TextStyle(fontSize: 16),
+              ),
+            ),
+            IconButton(
+              onPressed: viewModel.pickAttachment,
+              icon: const Icon(Icons.attach_file, color: Colors.red),
+              tooltip: "Add Attachment",
+            ),
+            if (viewModel.attachmentFileName != null)
+              IconButton(
+                onPressed: viewModel.removeAttachment,
+                icon: const Icon(Icons.close, color: Colors.grey),
+                tooltip: "Remove Attachment",
+              ),
+          ],
+        ),
+        SizedBox(
+          height: 14,
+        ),
         Row(
           children: [
             Expanded(
@@ -68,7 +93,7 @@ class AssignmentForm extends StatelessWidget {
           child: ElevatedButton.icon(
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.blue.shade600,
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 14),
+              padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 54),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12)),
             ),

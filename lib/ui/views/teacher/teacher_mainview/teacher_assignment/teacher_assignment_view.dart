@@ -12,6 +12,7 @@ class TeacherAssignmentView extends StatelessWidget {
       viewModelBuilder: () => TeacherAssignmentViewModel(),
       builder: (context, model, child) {
         return Scaffold(
+          backgroundColor: Colors.white,
           body: SingleChildScrollView(
             padding: const EdgeInsets.all(16),
             child: AssignmentForm(viewModel: model),

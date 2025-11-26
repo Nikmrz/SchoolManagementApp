@@ -21,17 +21,52 @@ class Teacherattendview extends StatelessWidget {
               padding: const EdgeInsets.all(16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Text('Class: 7'),
-                  Text('Subject: Mathematics'),
-                  SizedBox(height: 18),
+                children: [
                   Text(
                     "Attendance",
                     style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
                     ),
                   ),
+                  Row(
+                    children: [
+                      const Text(
+                        "Class: ",
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      DropdownButton<String>(
+                        value: model.selectedClass,
+                        items: model.classList
+                            .map((cls) => DropdownMenuItem(
+                                  value: cls,
+                                  child: Text(cls),
+                                ))
+                            .toList(),
+                        onChanged: model.onClassChanged,
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      const Text(
+                        "Subject: ",
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      DropdownButton<String>(
+                        value: model.selectedSubject,
+                        items: model.subjectList
+                            .map((sub) => DropdownMenuItem(
+                                  value: sub,
+                                  child: Text(sub),
+                                ))
+                            .toList(),
+                        onChanged: model.onSubjectChanged,
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 18),
                   SizedBox(height: 14),
                   AttendFilterBar(),
                   SizedBox(height: 12),

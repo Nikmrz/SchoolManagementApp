@@ -19,19 +19,26 @@ class DashboardView extends StatelessWidget {
             children: [
               const Text(
                 "Hello,",
-                style: TextStyle(fontSize: 34, fontWeight: FontWeight.w500),
+                style: TextStyle(
+                  fontSize: 34,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
               Text(
                 "Mr. Dinesh Rai",
                 style: const TextStyle(
-                    fontSize: 28,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.green),
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.green,
+                ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 24),
               const Text(
                 "Connected Students",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
               const SizedBox(height: 12),
               SizedBox(
@@ -47,6 +54,8 @@ class DashboardView extends StatelessWidget {
                           width: 100,
                           margin: const EdgeInsets.only(right: 12),
                           decoration: BoxDecoration(
+                            border: Border.all(
+                                color: const Color(0xFF62E884), width: 1.5),
                             color: Colors.grey[200],
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -62,30 +71,53 @@ class DashboardView extends StatelessWidget {
                   },
                 ),
               ),
-              const SizedBox(height: 24),
-              const Text(
-                "Main Menu",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-              ),
-              const SizedBox(height: 12),
-              GridView.builder(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: model.services.length,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3, // 3 columns
-                  crossAxisSpacing: 12,
-                  mainAxisSpacing: 12,
-                  childAspectRatio: 1,
+              const SizedBox(height: 28),
+              Container(
+                padding: const EdgeInsets.all(18),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(22),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.05),
+                      blurRadius: 10,
+                      offset: const Offset(0, 4),
+                    ),
+                  ],
                 ),
-                itemBuilder: (context, index) {
-                  final service = model.services[index];
-                  return ServiceTile(
-                    icon: service.icon,
-                    label: service.label,
-                    onTap: () => model.onServiceSelected(service.label),
-                  );
-                },
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "Main Menu",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    GridView.builder(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemCount: model.services.length,
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 3,
+                        mainAxisSpacing: 16,
+                        crossAxisSpacing: 16,
+                        childAspectRatio: 0.90,
+                      ),
+                      itemBuilder: (context, index) {
+                        final service = model.services[index];
+                        return ServiceTile(
+                          icon: service.icon,
+                          label: service.label,
+                          onTap: () => model.onServiceSelected(service.label),
+                        );
+                      },
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

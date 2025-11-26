@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:schoolmngmtapp/ui/views/teacher/teacher_mainview/teacher_dashboard/teacherdashboardviewmodel.dart';
 import 'class_tile.dart';
+import '../teacherdashboardviewmodel.dart';
 
 class AssignedClassesSection extends StatelessWidget {
   final TeacherDashboardViewModel model;
@@ -13,20 +13,23 @@ class AssignedClassesSection extends StatelessWidget {
       children: [
         const Text(
           "Assigned Classes",
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
         ),
         const SizedBox(height: 12),
         SizedBox(
-          height: 110,
+          height: 120,
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
               for (var c in model.assignedClasses)
-                ClassTile(className: c["class"]!, subject: c["subject"]!),
+                ClassTile(
+                  className: c["class"]!,
+                  subject: c["subject"]!,
+                ),
               AddClassTile(onTap: model.addNewClass),
             ],
           ),
-        ),
+        )
       ],
     );
   }

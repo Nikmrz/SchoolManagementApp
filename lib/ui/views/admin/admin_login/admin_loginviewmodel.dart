@@ -7,7 +7,6 @@ class AdminLoginviewModel extends BaseViewModel {
   final _navService = locator<NavigationService>();
 
   void login() {
-    // Implement login logic here
     _navService.replaceWithAdminMainview();
   }
 }

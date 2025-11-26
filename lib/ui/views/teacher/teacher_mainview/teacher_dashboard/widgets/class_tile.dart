@@ -5,44 +5,54 @@ class ClassTile extends StatelessWidget {
   final String subject;
 
   const ClassTile({
-    Key? key,
     required this.className,
     required this.subject,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 100,
-      margin: const EdgeInsets.only(right: 12),
+      width: 110,
+      margin: const EdgeInsets.only(right: 14),
       decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(14),
+        gradient: const LinearGradient(
+          colors: [Color(0xFF4D9FFF), Color(0xFF0F67FF)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.2),
-            blurRadius: 5,
-            offset: const Offset(2, 2),
-          ),
+            color: Colors.blue.withOpacity(0.15),
+            blurRadius: 8,
+            offset: const Offset(2, 4),
+          )
         ],
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CircleAvatar(
-            backgroundColor: Colors.blueAccent.withOpacity(0.15),
+            radius: 22,
+            backgroundColor: Colors.white.withOpacity(0.2),
             child: Text(
               className,
               style: const TextStyle(
+                color: Colors.white,
                 fontWeight: FontWeight.bold,
-                color: Colors.blueAccent,
               ),
             ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 10),
           Text(
             subject,
-            style: const TextStyle(fontSize: 14, color: Colors.black54),
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontSize: 14,
+              color: Colors.white,
+              fontWeight: FontWeight.w500,
+            ),
           ),
         ],
       ),
@@ -52,23 +62,21 @@ class ClassTile extends StatelessWidget {
 
 class AddClassTile extends StatelessWidget {
   final VoidCallback onTap;
-
-  const AddClassTile({Key? key, required this.onTap}) : super(key: key);
+  const AddClassTile({required this.onTap, super.key});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 100,
-        margin: const EdgeInsets.only(right: 12),
+        width: 110,
+        margin: const EdgeInsets.only(right: 14),
         decoration: BoxDecoration(
-          color: Colors.blueAccent.withOpacity(0.08),
-          borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: Colors.blueAccent, width: 1),
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: Colors.blueAccent, width: 1.5),
         ),
         child: const Center(
-          child: Icon(Icons.add, color: Colors.blueAccent, size: 28),
+          child: Icon(Icons.add, color: Colors.blueAccent, size: 32),
         ),
       ),
     );

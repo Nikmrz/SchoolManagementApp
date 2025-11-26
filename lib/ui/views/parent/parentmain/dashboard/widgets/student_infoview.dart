@@ -13,14 +13,14 @@ class StudentCard extends StatelessWidget {
       child: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
         child: Container(
-          width: 140,
+          width: 120,
           margin: const EdgeInsets.only(right: 14),
           padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Colors.green.withOpacity(0.3),
-                Colors.teal.withOpacity(0.2),
+                Color(0xFF62E884),
+                Color(0xFF17BD52),
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -41,7 +41,7 @@ class StudentCard extends StatelessWidget {
                 style: const TextStyle(
                   fontWeight: FontWeight.w700,
                   fontSize: 15,
-                  color: Color.fromARGB(255, 0, 0, 0),
+                  color: Color.fromARGB(255, 255, 255, 255),
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -50,7 +50,8 @@ class StudentCard extends StatelessWidget {
                 "${student.roll} | ${student.studentClass}",
                 style: TextStyle(
                   fontSize: 12,
-                  color: const Color.fromARGB(255, 0, 0, 0).withOpacity(0.9),
+                  color:
+                      const Color.fromARGB(255, 255, 255, 255).withOpacity(0.9),
                 ),
                 textAlign: TextAlign.center,
               ),

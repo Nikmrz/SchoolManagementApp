@@ -12,14 +12,18 @@ class GreetingSection extends StatelessWidget {
         const Text(
           "Hello,",
           style: TextStyle(
-              fontSize: 26,
-              fontWeight: FontWeight.bold,
-              color: Colors.blueGrey),
+            fontSize: 34,
+            fontWeight: FontWeight.bold,
+            color: Colors.blue,
+          ),
         ),
         Text(
           name,
           style: const TextStyle(
-              fontSize: 22, fontWeight: FontWeight.w500, color: Colors.black87),
+            fontSize: 26,
+            fontWeight: FontWeight.w700,
+            color: Colors.black87,
+          ),
         ),
       ],
     );

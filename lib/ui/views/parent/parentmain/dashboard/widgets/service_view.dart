@@ -15,34 +15,38 @@ class ServiceTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      borderRadius: BorderRadius.circular(16),
       onTap: onTap,
-      borderRadius: BorderRadius.circular(20),
-      splashColor: Colors.white24,
       child: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Colors.green.shade400,
-              Colors.teal.shade400,
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-          borderRadius: BorderRadius.circular(20),
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.07),
+              blurRadius: 8,
+              offset: const Offset(0, 3),
+            )
+          ],
         ),
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 12),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, color: Colors.white, size: 34),
+            Container(
+              child: Icon(
+                icon,
+                size: 30,
+                color: Colors.green,
+              ),
+            ),
             const SizedBox(height: 10),
             Text(
               label,
               style: const TextStyle(
-                color: Colors.white,
                 fontSize: 12,
-                fontWeight: FontWeight.w500,
-                letterSpacing: 0.4,
+                fontWeight: FontWeight.w600,
+                color: Colors.black87,
               ),
               textAlign: TextAlign.center,
             ),

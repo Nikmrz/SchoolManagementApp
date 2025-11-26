@@ -19,24 +19,26 @@ class MainMenuTile extends StatelessWidget {
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.grey.shade100,
+          color: Colors.white,
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-                color: Colors.grey.shade300,
-                blurRadius: 4,
-                offset: const Offset(2, 2)),
+              color: Colors.grey.shade300,
+              blurRadius: 4,
+              offset: const Offset(2, 2),
+            ),
           ],
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, size: 32, color: Colors.blue),
+            Icon(icon, size: 32, color: Colors.redAccent),
             const SizedBox(height: 8),
-            Text(label,
-                textAlign: TextAlign.center,
-                style:
-                    const TextStyle(fontSize: 13, fontWeight: FontWeight.w500)),
+            Text(
+              label,
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
+            ),
           ],
         ),
       ),

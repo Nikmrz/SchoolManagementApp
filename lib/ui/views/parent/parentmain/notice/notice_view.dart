@@ -21,7 +21,7 @@ class NoticeView extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 28,
                         fontWeight: FontWeight.bold,
-                        color: const Color.fromARGB(255, 0, 227, 106))),
+                        color: Colors.green)),
               ),
               if (model.newNotices.isNotEmpty)
                 const Padding(

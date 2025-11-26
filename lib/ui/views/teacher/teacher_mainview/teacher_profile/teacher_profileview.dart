@@ -23,7 +23,7 @@ class TeacherProfileView extends StatelessWidget {
                 ),
                 const SizedBox(height: 12),
                 Text(
-                  "Teacher Name",
+                  "Meena Sherpa",
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -32,29 +32,38 @@ class TeacherProfileView extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  "teacher123@school.com",
+                  "meena.sherpa@school.edu.np",
                   style: TextStyle(
                     fontSize: 14,
                     color: Colors.grey.shade600,
                   ),
                 ),
                 const SizedBox(height: 30),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text(
-                      "Dark Mode",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                      ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 154, 174, 253),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(14.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text(
+                          "Dark Mode",
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Switch(
+                          value: model.darkMode,
+                          activeColor: const Color.fromARGB(255, 251, 251, 251),
+                          onChanged: model.toggleDarkMode,
+                        ),
+                      ],
                     ),
-                    Switch(
-                      value: model.darkMode,
-                      activeColor: Colors.blue,
-                      onChanged: model.toggleDarkMode,
-                    ),
-                  ],
+                  ),
                 ),
                 const Spacer(),
                 SizedBox(
@@ -62,11 +71,16 @@ class TeacherProfileView extends StatelessWidget {
                   height: 52,
                   child: ElevatedButton.icon(
                     onPressed: model.logout,
-                    icon: const Icon(Icons.logout),
+                    icon: const Icon(
+                      Icons.logout,
+                      color: Colors.white,
+                    ),
                     label: const Text(
                       "Logout",
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
                     ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.redAccent,

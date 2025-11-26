@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:schoolmngmtapp/ui/views/teacher/teacher_mainview/teacher_assignment/teacher_assignment_view.dart';
 import 'package:schoolmngmtapp/ui/views/teacher/teacher_mainview/teacher_attendence/teacherattendview.dart';
 import 'package:schoolmngmtapp/ui/views/teacher/teacher_mainview/teacher_dashboard/teacherdashboardview.dart';
+import 'package:schoolmngmtapp/ui/views/teacher/teacher_mainview/teacher_profile/teacher_profileview.dart';
 import 'package:schoolmngmtapp/ui/views/teacher/teacher_mainview/teacher_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 
@@ -19,6 +20,7 @@ class TeacherMainView extends StatelessWidget {
       ) {
         return Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.white,
             leadingWidth: 200,
             leading: Padding(
               padding: const EdgeInsets.only(left: 12.0, top: 12),
@@ -52,18 +54,15 @@ class TeacherMainView extends StatelessWidget {
               TeacherDashboardView(),
               Teacherattendview(),
               TeacherAssignmentView(),
+              TeacherProfileView(),
             ],
           ),
           bottomNavigationBar: BottomNavigationBar(
+            backgroundColor: Colors.white,
             currentIndex: model.currentIndex,
             onTap: model.setIndex,
-            type: BottomNavigationBarType.fixed,
-            backgroundColor: Colors.blue.shade600,
-            selectedItemColor: Colors.white,
-            unselectedItemColor: Colors.white70,
-            showUnselectedLabels: true,
-            selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
-            unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w400),
+            selectedItemColor: Colors.blue,
+            unselectedItemColor: Colors.grey,
             items: const [
               BottomNavigationBarItem(
                 icon: Icon(Icons.dashboard),

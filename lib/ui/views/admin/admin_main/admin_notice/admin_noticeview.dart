@@ -24,7 +24,11 @@ class AdminNoticeView extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
+                        color: Colors.redAccent,
                       ),
+                    ),
+                    SizedBox(
+                      height: 14,
                     ),
                     if (model.newNotices.isNotEmpty)
                       const Padding(

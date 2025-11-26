@@ -23,7 +23,7 @@ class Childassignmentview extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
-                    color: const Color.fromARGB(255, 51, 244, 2),
+                    color: Colors.green,
                   ),
                 ),
                 SizedBox(
