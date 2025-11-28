@@ -25,4 +25,9 @@ class AdminMainviewmodel extends BaseViewModel {
     currentIndex = 3;
     notifyListeners();
   }
+
+  void onFeePressed() {
+    currentIndex = 2;
+    notifyListeners();
+  }
 }

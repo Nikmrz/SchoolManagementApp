@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:schoolmngmtapp/ui/views/admin/admin_main/admin_dashboard/admin_dashview.dart';
 import 'package:schoolmngmtapp/ui/views/admin/admin_main/admin_mainviewmodel.dart';
 import 'package:schoolmngmtapp/ui/views/admin/admin_main/admin_notice/admin_noticeview.dart';
+import 'package:schoolmngmtapp/ui/views/admin/admin_main/adminfees/adminfees_main.dart';
 import 'package:stacked/stacked.dart';
 
 class AdminMainview extends StatelessWidget {
@@ -55,6 +56,7 @@ class AdminMainview extends StatelessWidget {
             children: const [
               AdminDashview(),
               AdminNoticeView(),
+              AdminFeeView(),
             ],
           ),
           bottomNavigationBar: BottomNavigationBar(
